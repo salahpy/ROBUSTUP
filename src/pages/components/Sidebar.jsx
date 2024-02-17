@@ -9,11 +9,13 @@ import logout from "../../assets/logout.png?react"
 
 const Sidebar = () => {
   return (
-    <div>
-      <div className="h-full px-8 pt-8">
+    <div className=" bg-slate-800 mr-8 ">
+      <div className="h-full px-3 sm:px-8 pt-8 pb-10">
         <div>
-          <div>
-            <h1 className="text-[40px] text-white font-extrabold">ROBUSTUP</h1>
+          <div className="flex justify-center">
+            <h1 className="sm:text-[40px] text-[30px] text-white font-extrabold ">
+              ROBUSTUP
+            </h1>
           </div>
           <div className="mt-32">
             <Card title="Overview" icon={elemen} />

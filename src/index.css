@@ -77,3 +77,8 @@ body{
   box-shadow: var(--card-shadow);
 }
 
+@media (min-width: 768px) {
+  .sm-show {
+    display: block;
+  }
+}

@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Signup from "./pages/Signup"
 import Signupinv from "./pages/Signupinv"
 import Dashboard from "./pages/Dashboard"
+import SProfile from "./pages/SProfile"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signupStartup" element={<Signup />} />
           <Route path="/signupInvestor" element={<Signupinv />} />
           <Route path="/Dashboard" element={<Dashboard />} />
+          <Route path="/SProfile" element={<SProfile />} />
         </Routes>
       </div>
     </BrowserRouter>
