@@ -11,60 +11,50 @@ const SProfile = () => {
         <div>
           <p className="text-[30px] font-bold">Welcome to your profile</p>
           <div>
-            <p className="mt-5 text-[25px]">Start up name</p>
+            <p className="mt-5 text-[25px]">First Name</p>
             <div className="mt-3 w-[400px] rounded-xl">
               <input
                 type="text"
-                placeholder="ROBUST UP"
+                placeholder="Salah"
                 className=" p-2 rounded-xl w-full h-full text-black"
               />
             </div>
           </div>
           <div>
-            <p className="mt-5 text-[25px]">Email</p>
+            <p className="mt-5 text-[25px]">Last Name</p>
             <div className="mt-3 w-[400px] rounded-xl">
               <input
                 type="text"
-                placeholder="RobustUP@gmail.com"
+                placeholder="Nacef"
                 className=" p-2 rounded-xl w-full h-full text-black"
               />
             </div>
           </div>
           <div>
-            <p className="mt-5 text-[25px]">Contact Number</p>
+            <p className="mt-5 text-[25px]">Phone Number</p>
             <div className="mt-3 w-[400px] rounded-xl">
               <input
                 type="text"
-                placeholder="Freelance"
+                placeholder="phone number"
                 className=" p-2 rounded-xl w-full h-full text-black"
               />
             </div>
             <div>
-              <p className="mt-5 text-[25px]">Biography</p>
-              <div className="mt-3 w-[400px] h-[100px] rounded-xl">
-                <textarea
+              <p className="mt-5 text-[25px]">email</p>
+              <div className="mt-3 w-[400px]rounded-xl">
+                <input
                   type="text"
-                  placeholder="EX : Our startup......"
+                  placeholder="s.nacef@esi.dz"
                   className=" p-2 rounded-xl w-full h-full text-black"
                 />
               </div>
             </div>
             <div>
-              <p className="mt-5 text-[25px]">Industry</p>
+              <p className="mt-5 text-[25px]">is a Mentor</p>
               <div className="mt-3 w-[400px] rounded-xl">
                 <input
                   type="text"
-                  placeholder="Freelance"
-                  className=" p-2 rounded-xl w-full h-full text-black"
-                />
-              </div>
-            </div>
-            <div>
-              <p className="mt-5 text-[25px]">Status</p>
-              <div className="mt-3 w-[400px] rounded-xl">
-                <input
-                  type="text"
-                  placeholder=""
+                  placeholder="No"
                   className=" p-2 rounded-xl w-full h-full text-black"
                 />
               </div>

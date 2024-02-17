@@ -21,7 +21,7 @@ const StartupLayout = () => {
           <PendingStartup
             pic={pic}
             title="salah"
-            status="Approuved"
+            status="not approuved"
             by="by AI"
             className="mb-10"
           />

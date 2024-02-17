@@ -1,23 +1,32 @@
 import React from "react"
 import Inpu2 from "./Inpu2"
+import { useNavigate } from "react-router-dom"
 
 const C3 = () => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate("/enhace")
+    console.log("Button clicked!")
+  }
   return (
     <div className="flex flex-col justify-start p-5 bg-slate-800 rounded-xl">
       <h1 className="text-white text-[20px] font-semibold px-5">
         Know your Audience
       </h1>
       <div className="flex flex-row items-center mb-4">
-        <div className="flex flex-col ">
-          <Inpu2 placeholder="StartUp Name" />
-          <textarea
-            placeholder="Description"
-            className="px-6 py-2 rounded-xl bg-slate-800 border-[#c0c0c0] border-[1px] mx-4 my-3"
-          />
+        <div className="flex flex-col text-white px-5">
+          If you want to enhace your startup's target audience, our AI model is
+          here to assist you
         </div>
       </div>
       <div className="flex justify-end">
-        <button className="bg-blue-gradient py-2 px-2 rounded-lg">Check</button>
+        <button
+          onClick={handleClick}
+          className="bg-[#03DAC5] my-3 flex items-center py-3 px-5 rounded-3xl"
+        >
+          <h1 className=" uppercase">click here</h1>
+        </button>
       </div>
     </div>
   )

@@ -7,6 +7,7 @@ import sms from "../../assets/sms.png?react"
 import settin from "../../assets/settin.png?react"
 import logout from "../../assets/logout.png?react"
 import { NavLink } from "react-router-dom"
+import Enhace from "./Enhace"
 
 const Sidebar = () => {
   return (
@@ -32,10 +33,16 @@ const Sidebar = () => {
               {" "}
               <Card title="Your Startups" icon={sms} />
             </NavLink>
+            <NavLink to={"/Enhace"}>
+              {" "}
+              <Card title="Audience" icon={sms} />
+            </NavLink>
           </div>
           <div className="mt-36">
-            <Card title="Settings" icon={settin} />
-            <Card title="Logout" icon={logout} />
+            <NavLink to={"/login"}>
+              {" "}
+              <Card title="Logout" icon={logout} />
+            </NavLink>
           </div>
         </div>
       </div>

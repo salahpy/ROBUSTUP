@@ -25,9 +25,6 @@ const Dashboard = () => {
             <StartupLayout />
           </div>
           <div className="m-5">
-            <C2 />
-          </div>
-          <div className="m-5">
             <C3 />
           </div>
         </div>

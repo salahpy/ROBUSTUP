@@ -9,6 +9,7 @@ import SProfile from "./pages/SProfile"
 import Notifications from "./pages/Notifications"
 import Startups from "./pages/Startups"
 import Submit from "./pages/Submit"
+import Enhace from "./pages/components/Enhace"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Notifications" element={<Notifications />} />
           <Route path="/Startups" element={<Startups />} />
           <Route path="/Submit" element={<Submit />} />
+          <Route path="/Enhace" element={<Enhace />} />
         </Routes>
       </div>
     </BrowserRouter>
