@@ -33,7 +33,7 @@ const Signup = () => {
 
         if (response.ok) {
           const data = await response.json();
-          alert(JSON.stringify(data, null, 2));
+          alert('Sign up successful. You can now log in');
           navigate('/login'); // Redirect to login page after successful signup
         } else {
           throw new Error('Failed to sign up');
@@ -74,10 +74,16 @@ const Signup = () => {
         </p>
       </div>
       <div className="justify-center items-center text-center mt-16">
+        <form onSubmit={formik.handleSubmit}>
         <div className="justify-center items-center text-center">
           <p className="text-dimWhite mt-8">Username</p>
           <input
             type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.username}
+            name="username"
+            
             className="mt-2 px-3 py-2 w-full max-w-[450px] rounded-3xl"
           />
         </div>
@@ -85,6 +91,10 @@ const Signup = () => {
           <p className="text-dimWhite mt-8 ">Password</p>
           <div>
             <input
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.password}
+              name="password"
               type={showPassword ? "text" : "password"}
               className="mt-2 px-3  py-2 w-full max-w-[450px] rounded-3xl"
             />
@@ -101,11 +111,16 @@ const Signup = () => {
         <div className=" justify-center items-center text-center">
           <p className="text-dimWhite mt-8 ">Confirm Password</p>
           <input
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.confirmPassword}
+            name="confirmPassword"
             type="password"
+            
             className="mt-2 px-3 py-2 w-full max-w-[450px] rounded-3xl"
           />
         </div>
-        <button className="text-dimWhite mt-2  text-end ">
+        <button type="button" className="text-dimWhite mt-2  text-end ">
             {" "}
             forget password?
           </button>
@@ -121,9 +136,10 @@ const Signup = () => {
             <a href="/login"> Log in </a>
           </span>
         </div>
+        </form>
       </div>
     </div>
   )
 }
 
-export default Login
+export default Signup
