@@ -1,13 +1,13 @@
 import React from "react"
-import Profile from "./Profile"
-import Inpu from "./Inpu"
 
 const Nav2 = () => {
   return (
     <div>
-      <div className="flex items-center justify-between mb-10">
-        <Inpu placeholder="Search"  />
-        <Profile />
+      <div className="text-center mb-10">
+        <input
+          placeholder="Search"
+          className="sm:px-6 px-2 py-2 rounded-xl input"
+        />
       </div>
     </div>
   )

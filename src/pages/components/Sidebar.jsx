@@ -28,7 +28,7 @@ const Sidebar = () => {
             <NavLink to={"/Notifications"}>
               <Card title="Notifications" icon={messag} />
             </NavLink>
-            <NavLink to={"/Dashboard"}>
+            <NavLink to={"/Startups"}>
               {" "}
               <Card title="Your Startups" icon={sms} />
             </NavLink>

@@ -14,7 +14,7 @@ const Dashboard = () => {
         <Sidebar />
       </div>
       <div>
-        <div className="mt-8 sm:mt-10 sm:px-20">
+        <div className="mt-8 sm:mt-10">
           <Nav2 />
         </div>
         <div className="flex flex-wrap">

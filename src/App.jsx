@@ -7,6 +7,8 @@ import Signupinv from "./pages/Signupinv"
 import Dashboard from "./pages/Dashboard"
 import SProfile from "./pages/SProfile"
 import Notifications from "./pages/Notifications"
+import Startups from "./pages/Startups"
+import Submit from "./pages/Submit"
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/SProfile" element={<SProfile />} />
           <Route path="/Notifications" element={<Notifications />} />
+          <Route path="/Startups" element={<Startups />} />
+          <Route path="/Submit" element={<Submit />} />
         </Routes>
       </div>
     </BrowserRouter>
