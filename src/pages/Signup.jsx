@@ -3,19 +3,44 @@ import { useFormik } from "formik"
 import * as Yup from "yup"
 import vector from "../assets/Vector.png?react"
 import eye from "../assets/eye.png?react"
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
+const Signup = () => {
+  const navigate = useNavigate();
+
   const formik = useFormik({
     initialValues: {
-      email: "",
+      username: "",
       password: "",
+      confirmPassword: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string().required("Required"),
+      username: Yup.string().required("Required"),
       password: Yup.string().required("Required"),
+      confirmPassword: Yup.string()
+        .oneOf([Yup.ref('password'), null], 'Passwords must match')
+        .required('Required'),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2))
+    onSubmit: async (values) => {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/user/register/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(values),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          alert(JSON.stringify(data, null, 2));
+          navigate('/login'); // Redirect to login page after successful signup
+        } else {
+          throw new Error('Failed to sign up');
+        }
+      } catch (error) {
+        console.error(error);
+      }
     },
   })
 
@@ -50,14 +75,7 @@ const Login = () => {
       </div>
       <div className="justify-center items-center text-center mt-16">
         <div className="justify-center items-center text-center">
-          <p className="text-dimWhite ">Name of the start up</p>
-          <input
-            type="text"
-            className="mt-2 px-3 py-2 w-full max-w-[450px] rounded-3xl"
-          />
-        </div>
-        <div className="justify-center items-center text-center">
-          <p className="text-dimWhite mt-8">Email or username</p>
+          <p className="text-dimWhite mt-8">Username</p>
           <input
             type="text"
             className="mt-2 px-3 py-2 w-full max-w-[450px] rounded-3xl"
@@ -78,16 +96,25 @@ const Login = () => {
               <img src={eye} />
             </button>
           </div>
-          <button className="text-dimWhite mt-2  text-end ">
+
+        </div>
+        <div className=" justify-center items-center text-center">
+          <p className="text-dimWhite mt-8 ">Confirm Password</p>
+          <input
+            type="password"
+            className="mt-2 px-3 py-2 w-full max-w-[450px] rounded-3xl"
+          />
+        </div>
+        <button className="text-dimWhite mt-2  text-end ">
             {" "}
             forget password?
           </button>
-        </div>
         <div>
           <button className="px-3 py-2 rounded-3xl bg-dimWhite mt-8 w-[200px] font-bold">
             Create an account
           </button>
         </div>
+
         <div className="mt-6 text-dimWhite">
           already have an account?
           <span className="text-white">
