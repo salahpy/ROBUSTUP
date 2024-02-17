@@ -6,6 +6,7 @@ import messag from "../../assets/messag.png?react"
 import sms from "../../assets/sms.png?react"
 import settin from "../../assets/settin.png?react"
 import logout from "../../assets/logout.png?react"
+import { NavLink } from "react-router-dom"
 
 const Sidebar = () => {
   return (
@@ -18,10 +19,19 @@ const Sidebar = () => {
             </h1>
           </div>
           <div className="mt-32">
-            <Card title="Overview" icon={elemen} />
-            <Card title="Profile" icon={PersonCircle} />
-            <Card title="Notifications" icon={messag} />
-            <Card title="Your Startups" icon={sms} />
+            <NavLink to={"/Dashboard"}>
+              <Card title="Overview" icon={elemen} />
+            </NavLink>
+            <NavLink to={"/SProfile"}>
+              <Card title="Profile" icon={PersonCircle} />
+            </NavLink>
+            <NavLink to={"/Notifications"}>
+              <Card title="Notifications" icon={messag} />
+            </NavLink>
+            <NavLink to={"/Dashboard"}>
+              {" "}
+              <Card title="Your Startups" icon={sms} />
+            </NavLink>
           </div>
           <div className="mt-36">
             <Card title="Settings" icon={settin} />
