@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
 
-const Inpu = ({placeholder}) => {
+const Inpu = ({ placeholder }) => {
   return (
     <div>
-        <input
+      <input
         type="text"
         placeholder={placeholder}
-        className="px-6 py-2 rounded-xl "
+        className="sm:px-6 px-2 py-2 rounded-xl "
       />
     </div>
   )

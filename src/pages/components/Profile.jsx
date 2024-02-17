@@ -6,8 +6,8 @@ const Profile = () => {
   return (
     <div className="flex items-center">
       <img src={pp} className=" px-3" />
-      <h1 className="text-white">Nacef Salah</h1>
-      <img src={sahm} className="px-3" />
+      <h1 className="text-white hidden sm:block">Nacef Salah</h1>
+      <img src={sahm} className="sm:px-3 " />
     </div>
   )
 }
